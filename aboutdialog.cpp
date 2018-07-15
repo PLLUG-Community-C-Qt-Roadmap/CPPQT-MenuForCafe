@@ -18,6 +18,6 @@ AboutDialog::~AboutDialog()
 
 void AboutDialog::setInfo()
 {
-    ui->labelName->setText(QString(tr("Program name %1")) .arg(qApp->applicationName()));
-    ui->labelVersion->setText(QString(tr("Program version %1")) .arg(qApp->applicationVersion()));
+    ui->labelName->setText(QString(tr("Program name : %1")) .arg(qApp->applicationName()));
+    ui->labelVersion->setText(QString(tr("Program version : %1")) .arg(qApp->applicationVersion()));
 }
