@@ -78,7 +78,7 @@
      <x>0</x>
      <y>0</y>
      <width>543</width>
-     <height>20</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -99,6 +99,8 @@
     <property name="title">
      <string>&amp;Help</string>
     </property>
+    <addaction name="actionAbout_Menu_Editor"/>
+    <addaction name="actionAbout_Qt"/>
    </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_Edit"/>
@@ -128,6 +130,16 @@
   <action name="actionExit_2">
    <property name="text">
     <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionAbout_Menu_Editor">
+   <property name="text">
+    <string>About Menu Editor</string>
+   </property>
+  </action>
+  <action name="actionAbout_Qt">
+   <property name="text">
+    <string>About Qt</string>
    </property>
   </action>
  </widget>

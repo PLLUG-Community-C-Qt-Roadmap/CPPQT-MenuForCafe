@@ -25,6 +25,8 @@ int main(int argc, char** argv)
 
     QApplication app(argc, argv);
     MainWindow mainwindow;
+    app.setApplicationName("Menu Editor");
+    app.setApplicationVersion(QString("%1").arg(APP_VERSION));
     mainwindow.show();
     return app.exec();
 }

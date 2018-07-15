@@ -3,6 +3,7 @@
 
 #include "texteditprintmenuvisitor.h"
 #include "menuiterator.h"
+#include "aboutdialog.h"
 
 #include "core/consoleprintmenuvisitor.h"
 #include "core/consoleprintmenuvisitor.h"
@@ -21,6 +22,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     connect(ui->actionExit_2, &QAction::triggered, this, &MainWindow::close);
+    connect(ui->actionAbout_Menu_Editor , &QAction::triggered , this , &MainWindow::slotAboutApp);
+    connect(ui->actionAbout_Qt , &QAction::triggered , qApp ,&QApplication::aboutQt);
 
     initMenu();
     slotPrintMenu();
@@ -57,4 +60,11 @@ void MainWindow::slotPrintMenu()
         auto item =  iterator.next();
         item->apply(&visitor);
     }
+}
+
+void MainWindow::slotAboutApp()
+{
+    AboutDialog mDialog;
+    mDialog.setModal(true);
+    mDialog.exec();
 }

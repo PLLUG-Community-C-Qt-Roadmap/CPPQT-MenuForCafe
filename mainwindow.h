@@ -23,6 +23,7 @@ private:
 
 private slots:
     void slotPrintMenu();
+    void slotAboutApp();
 
 private:
     Ui::MainWindow *ui;
