@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include "menuitemeditor.h"
+
 #include "texteditprintmenuvisitor.h"
 #include "menuiterator.h"
 
@@ -21,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     connect(ui->actionExit_2, &QAction::triggered, this, &MainWindow::close);
+    connect(ui->addButton, &QPushButton::clicked, this, &MainWindow::slotOpenMenuItemEditor);
 
     initMenu();
     slotPrintMenu();
@@ -57,4 +60,11 @@ void MainWindow::slotPrintMenu()
         auto item =  iterator.next();
         item->apply(&visitor);
     }
+}
+
+void MainWindow::slotOpenMenuItemEditor()
+{
+    MenuItemEditor *menuItemEditor = new MenuItemEditor(this);
+    if (menuItemEditor->exec())
+        menuItemEditor->show();
 }

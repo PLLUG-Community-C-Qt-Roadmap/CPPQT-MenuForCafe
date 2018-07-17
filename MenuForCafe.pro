@@ -1,8 +1,8 @@
 TEMPLATE += app
-QMAKE_CXXFLAGS += -std=c++17
+QMAKE_CXXFLAGS += -std=c++14
 QT += core gui widgets
 
-#CONFIG += console
+CONFIG += c++14
 #CONFIG -= app_bundle
 #CONFIG -= qt
 
@@ -13,13 +13,16 @@ SOURCES += \
     $$PWD/texteditprintmenuvisitor.cpp \
     $$PWD/helpervisitor.cpp \
     $$PWD/menuiterator.cpp \
-    $$PWD/mainwindow.cpp
+    $$PWD/mainwindow.cpp \
+    $$PWD/menuitemeditor.cpp
 
 HEADERS += \
     $$PWD/texteditprintmenuvisitor.h \
     $$PWD/helpervisitor.h \
     $$PWD/menuiterator.h \
-    $$PWD/mainwindow.h
+    $$PWD/mainwindow.h \
+    $$PWD/menuitemeditor.h
 
 FORMS += \
-    $$PWD/mainwindow.ui
+    $$PWD/mainwindow.ui \
+    $$PWD/menuitemeditor.ui
