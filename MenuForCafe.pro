@@ -13,13 +13,20 @@ SOURCES += \
     $$PWD/texteditprintmenuvisitor.cpp \
     $$PWD/helpervisitor.cpp \
     $$PWD/menuiterator.cpp \
-    $$PWD/mainwindow.cpp
+    $$PWD/mainwindow.cpp \
+    aboutdialog.cpp
 
 HEADERS += \
     $$PWD/texteditprintmenuvisitor.h \
     $$PWD/helpervisitor.h \
     $$PWD/menuiterator.h \
-    $$PWD/mainwindow.h
+    $$PWD/mainwindow.h \
+    aboutdialog.h
 
 FORMS += \
-    $$PWD/mainwindow.ui
+    $$PWD/mainwindow.ui \
+    aboutdialog.ui
+
+DEFINES += \
+    APP_VERSION=\\\"1.12.7\\\" \
+
